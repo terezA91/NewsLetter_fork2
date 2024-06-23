@@ -23,9 +23,5 @@ jobs:
         run : |
           docker login -u ${{secrets.HUB_UNAME}} -p ${{secrets.HUB_PSW}}
           docker push ${{secrets.HUB_UNAME}}/myimage:latest 
-    services:
-      my-image:
-        image: terezabisharyan/myimage:latest
-        ports: 
-          - 3000:8080
-      
+      - name: Docker pull
+        run : docker pull terezabisharyan/myimage
