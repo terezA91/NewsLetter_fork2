@@ -9,3 +9,5 @@ COPY . /app
 RUN npm i express && \
     npm i body-parser && \
     npm i requests
+
+EXPOSE 3000
