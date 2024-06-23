@@ -24,7 +24,7 @@ jobs:
       - name: Docker pull
         run : docker pull terezabisharyan/myimage
       - name: Docker run  
-        run : docker run -d --name dev_container -p 3000:8080 terezabisharyan/myimage
+        run : docker run -d --name dev_container -p 3000:8082 terezabisharyan/myimage
     #services:
       #myimage:
         #image: terezabisharyan/myimage
