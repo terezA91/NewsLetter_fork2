@@ -10,4 +10,6 @@ RUN npm i express && \
     npm i body-parser && \
     npm i requests
 
+CMD ["node", "app.js"]    
+
 EXPOSE 3000
