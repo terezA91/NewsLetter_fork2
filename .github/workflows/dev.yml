@@ -16,10 +16,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Docker build
-        run : docker build -t myimage:latest .
-      - name: Docker run 
-        run : docker run -d --name dev-$SHA -p 3000:8080 myimage:latest
-      #- name: Docker push
-        #run : |
-          #docker login -u ${{secrets.DOCKERHUB_UNAME}} -p ${{secrets.DOCKERHUB_PSW}}
-          #docker push ${{secrets.DOCKERHUB_UNAME}}/myimage:latest 
+        run : docker build -t terezabisharyan/myimage:latest .
+      #- name: Docker run 
+        #run : docker run -d --name dev-$SHA -p 3000:8080 myimage:latest
+      - name: Docker push
+        run : |
+          docker login -u ${{secrets.HUB_UNAME}} -p ${{secrets.HUB_PSW}}
+          docker push ${{secrets.HUB_UNAME}}/myimage:latest 
