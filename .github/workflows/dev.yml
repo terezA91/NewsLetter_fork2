@@ -23,10 +23,10 @@ jobs:
         run : |
           docker login -u ${{secrets.HUB_UNAME}} -p ${{secrets.HUB_PSW}}
           docker push ${{secrets.HUB_UNAME}}/myimage:latest 
-      - name: Docker pull
-        run : docker pull terezabisharyan/myimage
-      - name: Docker run  
-        run : docker run -d --name dev_container -p 3000:8080 terezabisharyan/myimage
+      #- name: Docker pull
+        #run : docker pull terezabisharyan/myimage
+      #- name: Docker run  
+        #run : docker run -d --name dev_container -p 3000:8080 terezabisharyan/myimage
     services:
       myimage:
         image: terezabisharyan/myimage
